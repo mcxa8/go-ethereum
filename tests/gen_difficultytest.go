@@ -32,7 +32,7 @@ func (d DifficultyTest) MarshalJSON() ([]byte, error) {
 	return json.Marshal(&enc)
 }
 
-// UnmarshalJSON unmarshals from JSON.
+// JSON.
 func (d *DifficultyTest) UnmarshalJSON(input []byte) error {
 	type DifficultyTest struct {
 		ParentTimestamp    *math.HexOrDecimal64  `json:"parentTimestamp"`
