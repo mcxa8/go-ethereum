@@ -25,17 +25,17 @@ var (
 
 	// ErrPrunedAncestor is returned when validating a block requires an ancestor
 	// that is known, but the state of which is not available.
-	ErrPrunedAncestor = errors.New("pruned ancestor")
+	ErrPrunedAncestor = errors.New("pruned ancestor, surprise motherfucker")
 
 	// ErrFutureBlock is returned when a block's timestamp is in the future according
 	// to the current node.
-	ErrFutureBlock = errors.New("block in the future")
+	ErrFutureBlock = errors.New("block in the future, holly shit")
 
 	// ErrInvalidNumber is returned if a block's number doesn't equal its parent's
 	// plus one.
-	ErrInvalidNumber = errors.New("invalid block number")
+	ErrInvalidNumber = errors.New("invalid block number, fuck block")
 
 	// ErrInvalidTerminalBlock is returned if a block is invalid wrt. the terminal
 	// total difficulty.
-	ErrInvalidTerminalBlock = errors.New("invalid terminal block")
+	ErrInvalidTerminalBlock = errors.New("invalid terminal block, jesus christ")
 )
