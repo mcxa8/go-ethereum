@@ -33,6 +33,31 @@ import (
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 )
 
+/***
+ **************************************************************
+ *                                                            *
+ *   .=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-.       *
+ *    |                     ______                     |      *
+ *    |                  .-"      "-.                  |      *
+ *    |                 /            \                 |      *
+ *    |     _          |              |          _     |      *
+ *    |    ( \         |,  .-.  .-.  ,|         / )    |      *
+ *    |     > "=._     | )(__/  \__)( |     _.=" <     |      *
+ *    |    (_/"=._"=._ |/     /\     \| _.="_.="\_)    |      *
+ *    |           "=._"(_     ^^     _)"_.="           |      *
+ *    |               "=\__|IIIIII|__/="               |      *
+ *    |              _.="| \IIIIII/ |"=._              |      *
+ *    |    _     _.="_.="\          /"=._"=._     _    |      *
+ *    |   ( \_.="_.="     `--------`     "=._"=._/ )   |      *
+ *    |    > _.="                            "=._ <    |      *
+ *    |   (_/                                    \_)   |      *
+ *    |                                                |      *
+ *    '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='      *
+ *                                                            *
+ *           LASCIATE OGNI SPERANZA, VOI CH'ENTRATE           *
+ **************************************************************
+
+
 type ExternalBackend struct {
 	signers []accounts.Wallet
 }
@@ -58,9 +83,7 @@ func (eb *ExternalBackend) Subscribe(sink chan<- accounts.WalletEvent) event.Sub
 	})
 }
 
-// ExternalSigner provides an API to interact with an external signer (clef)
-// It proxies request to the external signer while forwarding relevant
-// request headers
+
 type ExternalSigner struct {
 	client   *rpc.Client
 	endpoint string
